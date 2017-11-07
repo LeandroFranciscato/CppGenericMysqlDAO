@@ -8,7 +8,7 @@
  * File:   MySqlDatabase.cpp
  * Author: leandro
  * 
- * Created on November 6, 2017, 4:21 PM
+ * Created on November 7, 2017, 9:31 AM
  */
 
 #include "MySqlDatabase.h"
@@ -23,11 +23,10 @@ MySqlDatabase::~MySqlDatabase() {
 }
 
 void MySqlDatabase::connect() {
-    MySqlDatabase::driver = get_driver_instance();
-    /*MySqlDatabase::con = driver->connect("tcp://127.0.0.1:3306", "if", "facadeca11");       
-    delete con;*/
-}
+    driver = get_driver_instance();
+    con = driver->connect("tcp://127.0.0.1:3306", "if", "facadeca10");
+};
 
 bool MySqlDatabase::isConnected() {
-    return (MySqlDatabase::con != NULL);
+    return con->isValid();
 }

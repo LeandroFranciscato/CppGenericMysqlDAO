@@ -5,5 +5,6 @@ using namespace std;
 
 int main(int argc, char** argv) {
     MySqlDatabase db;
-    cout << db.isConnected();    
+    db.connect();
+    cout << db.isConnected() <<endl;
 }
