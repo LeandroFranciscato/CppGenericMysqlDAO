@@ -18,7 +18,7 @@ public:
     virtual ~MySqlDatabase();    
     virtual sql::ResultSet* executeQuery(const sql::SQLString& cmd);    
 private:    
-    virtual void connect();    
+    virtual void connect();       
 };
 
 #endif /* MYSQLDATABASE_H */

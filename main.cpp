@@ -5,5 +5,6 @@ using namespace std;
 
 int main(int argc, char** argv) {
     MySqlDatabase db;    
-    cout << db.executeQuery("select * from test") <<endl;
+    sql::ResultSet *res = db.executeQuery("select * from test");
+    cout << res <<endl;
 }
