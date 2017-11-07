@@ -9,8 +9,8 @@ MKDIR=mkdir
 
 #------------------------------------------------------------------------------
 
-$(MYPROGRAM): $(SOURCE)
-	rm -f $(MYPROGRAM)
+$(MYPROGRAM): $(SOURCE)		
+	rm -r $(BUILDDIRECTORY)
 	$(MKDIR) $(BUILDDIRECTORY)
 	$(CC) -I $(MYINCLUDES) $(SOURCE) -o $(MYPROGRAM) -L $(MYLIBRARIES)
 clean:

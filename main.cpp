@@ -4,7 +4,6 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    MySqlDatabase db;
-    db.connect();
-    cout << db.isConnected() <<endl;
+    MySqlDatabase db;    
+    cout << db.executeQuery("select * from test") <<endl;
 }
